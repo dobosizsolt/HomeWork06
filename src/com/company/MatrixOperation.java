@@ -28,6 +28,16 @@ public class MatrixOperation implements IMatrixOperation {
     }
 
     public int[][] sum(int[][] matrixA, int[][] matrixB) {
-        return new int[0][];
+        /**Inicializáltam egy sumMatrix nevű új mátrixot,
+         * az összegek tárolására. For ciklusokkal végigjártam
+         * az egyik mátrixot és minden eleméhez a másik mátrix elemeit adtam,
+         * a kapott értékekkel feltöltöttem a sumMatrix-ot.*/
+        int[][] sumMatrix = new int[matrixA.length][matrixA[0].length];
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[i].length; j++) {
+                sumMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+        return sumMatrix;
     }
 }
